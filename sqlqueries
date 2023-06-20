@@ -1,0 +1,25 @@
+select *
+from interview inter
+join person pr on pr.id=inter.person_id
+where pr.address_street_name="Franklin Ave" 
+order by name asc
+
+select *
+from interview inter
+join person pr on pr.id=inter.person_id
+where pr.address_street_name="Northwestern Dr"
+order by 6 desc
+
+
+select mem.name, dr.plate_number
+from get_fit_now_member mem
+join person pr on pr.id=mem.person_id
+join drivers_license dr on dr.id=pr.license_id
+join get_fit_now_check_in ch on ch.membership_id=mem.id
+where mem.membership_status="gold" and dr.plate_number like "%H42W%" and ch.check_in_date=20180109
+
+select *
+from interview inter
+join person pr on pr.id=inter.person_id
+where name="Jeremy Bowers"
+
